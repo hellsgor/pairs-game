@@ -3,11 +3,21 @@ body {
   height: 100vh;
 }
 
-body {
-  margin: 0;
+.body-background {
+  background-color: #04380e;
 }
 
-.body-background {
-  background: radial-gradient(circle, rgba(41, 168, 0, .93) 0%, rgba(79, 148, 0, .93) 100%) no-repeat center, url("../src/images/texture-cloth.jpg") no-repeat center;
-  background-size: cover;
+.container {
+  max-width: 96%;
+  margin: 0 auto;
 }
+
+.menu {
+  max-width: 33.3333333333%;
+}
+
+.playing-field {
+  max-width: 66.6666666667%;
+}
+
+/*# sourceMappingURL=style.css.map */

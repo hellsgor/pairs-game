@@ -1,0 +1,25 @@
+html,
+body {
+  height: 100vh;
+}
+
+.body-background {
+  background-color: #04380e;
+}
+
+.container {
+  max-width: 96%;
+  margin: 0 auto;
+
+}
+
+.menu {
+  max-width: calc(100% / 3);
+}
+
+.playing-field {
+  max-width: calc((100% / 3) * 2);
+}
+
+//background: radial-gradient(circle, rgba(41, 168, 0, .93) 0%, rgba(79, 148, 0, .93) 100%) no-repeat center, url("../src/images/texture-cloth.jpg") no-repeat center;
+//background-size: cover;
