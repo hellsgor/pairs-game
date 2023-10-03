@@ -1,0 +1,13 @@
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+}
+
+.body-background {
+  background: radial-gradient(circle, rgba(41, 168, 0, .93) 0%, rgba(79, 148, 0, .93) 100%) no-repeat center, url("../src/images/texture-cloth.jpg") no-repeat center;
+  background-size: cover;
+}
