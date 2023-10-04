@@ -33,8 +33,6 @@ export function prepare() {
   // ----- добавление контента в панель с текстом ------ начало
   menuTextContent.append(createElement('p', ['menu__title', 'heading-1'], CONSTS.GAME_TITLE));
   menuTextContent.append(createElement('p', 'menu__description', CONSTS.GAME_DESCRIPTION));
-  menuTextContent.append(createElement('h2', 'menu__rules-title', CONSTS.RULES_TITLE));
-  menuTextContent.append(createElement('p', 'menu__rules-text', CONSTS.RULES_TEXT_0));
   menuTextContent.append(menuTextStart);
   menuTextContent.append(menuTextGameProgress);
   menuTextContent.append(menuTextEnd);
