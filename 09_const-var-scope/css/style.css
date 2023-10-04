@@ -3,6 +3,7 @@
 @import url('./typography.css');
 
 @import url('./components/menu.css');
+@import url('./components/playing-field.css');
 
 html,
 body {
@@ -19,8 +20,10 @@ body {
 }
 
 .container {
+  display: flex;
   max-width: 96%;
   margin: 0 auto;
+  column-gap: 32px;
 }
 
 .visually-hidden {
