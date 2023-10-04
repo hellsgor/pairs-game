@@ -1,3 +1,9 @@
+@import url('./null-style.css');
+@import url('./fonts.css');
+@import url('./typography.css');
+
+@import url('./components/menu.css');
+
 html,
 body {
   height: 100vh;
@@ -7,9 +13,19 @@ body {
   background-color: #04380e;
 }
 
+.body-custom {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
 .container {
   max-width: 96%;
   margin: 0 auto;
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
 }
 
 .menu {
