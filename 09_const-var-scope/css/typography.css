@@ -1,0 +1,36 @@
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: normal;
+  color: black;
+}
+
+h1,
+h2,
+h3,
+.heading-1,
+.heading-2,
+.heading-3 {
+  font-weight: 700;
+}
+
+h1,
+.heading-1 {
+  font-size: 30px;
+  line-height: 100%;
+}
+
+h2,
+.heading-2 {
+  font-size: 20px;
+  line-height: 130%;
+}
+
+h3,
+.heading-3 {
+  font-size: 18px;
+  line-height: 150%;
+}
