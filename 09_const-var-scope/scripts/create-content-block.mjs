@@ -28,7 +28,7 @@ export function createContentBlock(
   paragraphs.forEach((p, idx) => {
     contentBlock.append(createElement(
       'p',
-      `${blockClassName}-paragraph-${idx + 1}`,
+      [`${blockClassName}-paragraph-${idx + 1}`, 'menu__paragraph'],
       p));
   })
 
