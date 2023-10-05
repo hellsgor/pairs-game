@@ -4,7 +4,7 @@
   height: calc(100vh - (var(--basic-indent) * 2));
   padding: 32px;
   border: 20px solid #7b373b;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   flex-wrap: wrap;
   justify-content: space-around;
   box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.5) inset, 0 0 12px 12px rgba(0, 0, 0, 0.5);

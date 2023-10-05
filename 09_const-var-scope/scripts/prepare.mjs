@@ -9,6 +9,7 @@ export function prepare() {
   const container = createElement('div', 'container');
   const menu = createElement('div', 'menu');
   const playingField = createElement('div', 'playing-field');
+  const controls = createElement('div', 'menu__controls');
 
   // ----- добавление контента в панель с текстом (menu) ------ начало
   const menuTextContent = createElement('div', 'menu__text-content');
@@ -40,11 +41,15 @@ export function prepare() {
   menuTextContent.append(menuTextEnd);
   // ----- добавление контента в панель с текстом ------ конец
 
+
   body.classList.add('body-background');
   body.classList.add('body-custom');
 
+
   menu.append(createElement('h1', 'visually-hidden', CONSTS.HIDDEN_TITLE));
   menu.append(menuTextContent);
+  menu.append(createElement('button', ['menu__start-button', 'button'], 'Начать игру'))
+  menu.append(controls);
 
   container.append(menu);
   container.append(playingField);

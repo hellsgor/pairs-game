@@ -1,3 +1,8 @@
 :root {
   --basic-indent: 32px;
+  --background-color: #04380e;
+  --primary-color: #0c9519;
+  --border-radius: 8px;
+  --hover-color: #0cb41e;
+  --active-color: #086011;
 }

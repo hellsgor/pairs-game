@@ -1,0 +1,28 @@
+.button {
+  padding: 16px var(--basic-indent);
+  outline: 2px solid transparent;
+  outline-offset: 4px;
+  border: none;
+  border-radius: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  transition: outline-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.button:focus {
+  outline-color: var(--primary-color);
+}
+
+@media (hover: hover) {
+  .button:hover:not(:focus) {
+    background-color: var(--hover-color);
+  }
+}
+
+.button:active {
+  outline-color: transparent;
+  background-color: var(--active-color);
+}

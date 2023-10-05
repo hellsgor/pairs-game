@@ -1,10 +1,13 @@
 .menu {
+  display: flex;
   padding: 16px;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
+  flex-direction: column;
   -moz-box-shadow: -3px 4px 9px -1px rgba(0, 0, 0, 0.41);
   -webkit-box-shadow: -3px 4px 9px -1px rgba(0, 0, 0, 0.41);
   box-shadow: -3px 4px 9px -1px rgba(0, 0, 0, 0.41);
   background-color: white;
+  row-gap: var(--basic-indent);
 }
 
 .menu__text-content {
@@ -19,4 +22,14 @@
 
 .menu__paragraph {
   font-size: 14px;
+}
+
+.menu__controls {
+  display: none;
+  justify-content: center;
+  column-gap: var(--basic-indent);
+}
+
+.menu__start-button {
+  margin: 0 auto;
 }

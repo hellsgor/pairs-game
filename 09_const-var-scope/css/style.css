@@ -5,7 +5,8 @@
 
 @import url('./components/menu.css');
 @import url('./components/playing-field.css');
-@import url('components/card.css');
+@import url('./components/card.css');
+@import url('./components/button.css');
 
 html,
 body {
@@ -13,7 +14,7 @@ body {
 }
 
 .body-background {
-  background-color: #04380e;
+  background-color: var(--background-color);
 }
 
 .body-custom {
@@ -35,9 +36,9 @@ body {
 }
 
 .menu {
-  flex: 1 1 33%;
+  flex: 1 1 25%;
 }
 
 .playing-field {
-  flex: 2 2 66%;
+  flex: 2 2 75%;
 }
