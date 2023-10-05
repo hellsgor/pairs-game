@@ -8,3 +8,5 @@ export const RULES_TEXT_GAME_PROGRESS_TITLE = 'Ход игры';
 export const RULES_TEXT_GAME_PROGRESS_TEXT = 'Игрок может нажать на любую карточку. После нажатия карточка открывается. Далее игрок может открыть вторую карточку. Если открытые карточки содержат одинаковую цифру, они остаются открытыми до конца игры. Если вторая карточка содержит отличную от первой цифру, обе карточки закрываются.';
 export const RULES_TEXT_END_TITLE = 'Конец игры.';
 export const RULES_TEXT_END_TEXT = 'Как только игрок открыл все пары на поле, игра считается завершённой.';
+
+export const DEFAULT_PLAYING_FIELD_SIZE = 4;

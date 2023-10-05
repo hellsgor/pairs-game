@@ -1,6 +1,8 @@
 import {createElement} from "./create-element.mjs";
 import * as CONSTS from './consts/index.js';
 import {createContentBlock} from "./create-content-block.mjs";
+import {setCardSlotSizes} from "./set-card-slot-sizes.mjs";
+import {createCards} from "./create-cards.mjs";
 
 export function prepare() {
   const body = document.querySelector('body');
@@ -47,4 +49,7 @@ export function prepare() {
   container.append(menu);
   container.append(playingField);
   body.append(container);
+
+  createCards(CONSTS.DEFAULT_PLAYING_FIELD_SIZE);
+  setCardSlotSizes();
 }

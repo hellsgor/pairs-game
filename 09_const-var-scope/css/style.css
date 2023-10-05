@@ -1,9 +1,11 @@
 @import url('./null-style.css');
 @import url('./fonts.css');
+@import url('./variables.css');
 @import url('./typography.css');
 
 @import url('./components/menu.css');
 @import url('./components/playing-field.css');
+@import url('components/card.css');
 
 html,
 body {
@@ -15,15 +17,16 @@ body {
 }
 
 .body-custom {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: var(--basic-indent);
+  padding-bottom: var(--basic-indent);
 }
 
 .container {
   display: flex;
-  max-width: 96%;
-  margin: 0 auto;
-  column-gap: 32px;
+  width: 100%;
+  padding-right: var(--basic-indent);
+  padding-left: var(--basic-indent);
+  column-gap: var(--basic-indent);
 }
 
 .visually-hidden {
@@ -32,9 +35,9 @@ body {
 }
 
 .menu {
-  max-width: 33.3333333333%;
+  flex: 1 1 33%;
 }
 
 .playing-field {
-  max-width: 66.6666666667%;
+  flex: 2 2 66%;
 }
