@@ -1,7 +1,7 @@
 import {createElement} from "./create-element.mjs";
 import {DEFAULT_PLAYING_FIELD_SIZE, HIDDEN_TITLE} from "./consts/index.js";
 import {setCardSlotSizes} from "./set-cards-size.mjs";
-import {createCards} from "./create-cards.mjs";
+import {createSlots} from "./create-slots.mjs";
 import {createMenuTextContent} from './create-menu-text-content.mjs';
 
 export function prepare() {
@@ -27,6 +27,6 @@ export function prepare() {
   container.append(playingField);
   body.append(container);
 
-  createCards(DEFAULT_PLAYING_FIELD_SIZE);
+  createSlots(DEFAULT_PLAYING_FIELD_SIZE);
   setCardSlotSizes();
 }
