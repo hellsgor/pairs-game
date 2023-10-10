@@ -2,7 +2,10 @@
   --basic-indent: 32px;
   --background-color: #04380e;
   --primary-color: #0c9519;
-  --border-radius: 8px;
+  --secondary-color: #efefef;
   --hover-color: #0cb41e;
   --active-color: #086011;
+  --disabled-background-color: #f6f6f6;
+  --disabled-color: #e1e1e1;
+  --border-radius: 8px;
 }

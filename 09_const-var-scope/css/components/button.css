@@ -1,28 +1,59 @@
 .button {
-  padding: 16px var(--basic-indent);
   outline: 2px solid transparent;
   outline-offset: 4px;
   border: none;
   border-radius: 32px;
   font-weight: 700;
   text-transform: uppercase;
-  background-color: var(--primary-color);
-  color: #fff;
   cursor: pointer;
-  transition: outline-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: outline-color 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.25s ease-in-out;
 }
 
-.button:focus {
+.button_primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.button_secondary {
+  background-color: var(--secondary-color);
+  color: #000;
+}
+
+.button_big {
+  padding: 16px var(--basic-indent);
+}
+
+.button_small {
+  width: var(--basic-indent);
+  height: var(--basic-indent);
+}
+
+.button_round {
+  border-radius: 100%;
+}
+
+.button:focus:not(:hover) {
   outline-color: var(--primary-color);
 }
 
 @media (hover: hover) {
-  .button:hover:not(:focus) {
+  .button_primary:hover:not(:focus) {
     background-color: var(--hover-color);
+  }
+
+  .button_secondary:hover {
+    background-color: var(--hover-color);
+    color: #fff;
   }
 }
 
 .button:active {
   outline-color: transparent;
   background-color: var(--active-color);
+}
+
+.button:disabled {
+  background-color: var(--disabled-background-color);
+  color: var(--disabled-color);
+  pointer-events: none;
 }

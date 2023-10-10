@@ -12,7 +12,7 @@ export function prepare() {
   const playingField = createElement('div', 'playing-field');
   const controls = createElement('div', 'menu__controls');
   const sizeCounter = createSizeCounter();
-  const startButton = createElement('button', ['menu__start-button', 'button'], 'Начать игру');
+  const startButton = createElement('button', ['menu__start-button', 'button', 'button_primary', 'button_big'], 'Начать игру');
   const menuTextContent = createMenuTextContent();
 
   body.classList.add('body-background');
