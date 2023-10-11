@@ -1,22 +1,17 @@
-import {shuffle} from './scripts/shuffle.mjs';
-import {createNumbersArray} from './scripts/create-number-array.mjs';
 import {prepare} from "./scripts/prepare.mjs";
 
 import {
-  DEFAULT_PLAYING_FIELD_SIZE as fieldSize
+  DEFAULT_PLAYING_FIELD_SIZE as defaultFieldSize
 } from "./scripts/consts/index.js";
 import {setCardSlotSizes} from "./scripts/set-cards-size.mjs";
+import {startGame} from "./scripts/start-game.mjs";
 
-
-const numbersArray = shuffle(createNumbersArray(fieldSize));
+let customFieldSize = defaultFieldSize;
 
 document.addEventListener('DOMContentLoaded', () => {
-  prepare(fieldSize);
+  prepare((defaultFieldSize));
   document.getElementById('start-button')
-    .addEventListener('click', (event) => {
-      event.preventDefault();
-      console.log('start');
-    })
-})
+    .addEventListener('click', (event) => startGame(event, numbersArray));
+});
 
-window.addEventListener('resize', () => setCardSlotSizes(fieldSize));
+window.addEventListener('resize', () => setCardSlotSizes((customFieldSize)));

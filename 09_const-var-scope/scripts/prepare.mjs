@@ -1,11 +1,11 @@
 import {createElement} from "./create-element.mjs";
-import {DEFAULT_PLAYING_FIELD_SIZE, HIDDEN_TITLE} from "./consts/index.js";
+import {HIDDEN_TITLE} from "./consts/index.js";
 import {setCardSlotSizes} from "./set-cards-size.mjs";
 import {createSlots} from "./create-slots.mjs";
 import {createMenuTextContent} from './create-menu-text-content.mjs';
 import {createSizeCounter} from "./createSizeCounter.mjs";
 
-export function prepare() {
+export function prepare(fieldSize) {
   const body = document.querySelector('body');
   const container = createElement('div', 'container');
   const menu = createElement('div', 'menu');
@@ -30,6 +30,6 @@ export function prepare() {
   container.append(playingField);
   body.append(container);
 
-  createSlots(DEFAULT_PLAYING_FIELD_SIZE);
-  setCardSlotSizes();
+  createSlots(fieldSize);
+  setCardSlotSizes(fieldSize);
 }
