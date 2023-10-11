@@ -5,7 +5,47 @@
 }
 
 .card__slot {
+  position: relative;
   overflow: hidden;
   border: 2px solid rgba(255, 255, 255, 0.20);
   border-radius: var(--border-radius);
+}
+
+.card__exactly-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.card__exactly-card_back {
+  background-color: #e8e8e8;
+}
+
+.card__exactly-card_back::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/images/question.png") no-repeat center;
+  background-size: 80%;
+  content: '';
+  transform: translate(-50%, -50%);
+}
+
+.card__exactly-card_front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  visibility: hidden;
+  background-color: orange;
+  color: #000;
+}
+
+@media (hover: hover) {
+  .card__slot:not(.card__slot_empty):hover {
+    border-color: #00d7ff;
+  }
 }
