@@ -11,4 +11,4 @@ export const RULES_TEXT_END_TEXT = 'Как только игрок открыл 
 
 export const DEFAULT_PLAYING_FIELD_SIZE = 4;
 export const MIN_PLAYING_FIELD_SIZE = 2;
-export const MAX_PLAYING_FIELD_SIZE = 16;
+export const MAX_PLAYING_FIELD_SIZE = 6;
