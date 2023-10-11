@@ -1,5 +1,10 @@
 import {createElement} from "./create-element.mjs";
-import {DEFAULT_PLAYING_FIELD_SIZE} from "./consts/index.js";
+import {
+  DEFAULT_PLAYING_FIELD_SIZE,
+  FIELD_SIZE_COUNTER_DECREASE_BUTTON_ID,
+  FIELD_SIZE_COUNTER_ID,
+  FIELD_SIZE_COUNTER_INCREASE_BUTTON_ID
+} from "./consts/index.js";
 import {setCustomFieldSize} from "./set-custom-field-size.mjs";
 
 export function createSizeCounter() {
@@ -9,6 +14,10 @@ export function createSizeCounter() {
   const increaseButton = createElement('button', ['size-counter__increase', 'button', 'button_secondary', 'button_round', 'button_small'], '+');
   const decreaseButton = createElement('button', ['size-counter__decrease', 'button', 'button_secondary', 'button_round', 'button_small'], '-');
   const counter = createElement('p', 'size-counter__counter', `${DEFAULT_PLAYING_FIELD_SIZE} x ${DEFAULT_PLAYING_FIELD_SIZE}`);
+
+  counter.setAttribute('id', FIELD_SIZE_COUNTER_ID);
+  increaseButton.setAttribute('id', FIELD_SIZE_COUNTER_INCREASE_BUTTON_ID);
+  decreaseButton.setAttribute('id', FIELD_SIZE_COUNTER_DECREASE_BUTTON_ID);
 
   increaseButton.addEventListener('click', (event) => setCustomFieldSize(event));
   decreaseButton.addEventListener('click', (event) => setCustomFieldSize(event));

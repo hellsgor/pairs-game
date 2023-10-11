@@ -12,3 +12,7 @@ export const RULES_TEXT_END_TEXT = 'Как только игрок открыл 
 export const DEFAULT_PLAYING_FIELD_SIZE = 4;
 export const MIN_PLAYING_FIELD_SIZE = 2;
 export const MAX_PLAYING_FIELD_SIZE = 6;
+
+export const FIELD_SIZE_COUNTER_ID = 'field-size-counter';
+export const FIELD_SIZE_COUNTER_INCREASE_BUTTON_ID = 'field-size-counter-increase-button';
+export const FIELD_SIZE_COUNTER_DECREASE_BUTTON_ID = 'field-size-counter-decrease-button';
