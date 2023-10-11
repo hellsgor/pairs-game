@@ -1,6 +1,6 @@
 export const GAME_TITLE = 'Пары';
 export const HIDDEN_TITLE = 'Игра в пары';
-export const GAME_DESCRIPTION = 'Вам предстоит сыграть в простую игру в пары';
+export const GAME_DESCRIPTION = 'Вам предстоит сыграть в простую игру для тренировки памяти - Пары.';
 
 export const RULES_TEXT_START_TITLE = 'Начало игры';
 export const RULES_TEXT_START_TEXT = 'На странице выводится поле, например, 4 × 4, из карточек. Каждая карточка содержит цифру. Пользователь не видит цифры — карточки расположены рубашкой вверх. На поле строго по две карточки с одинаковой цифрой, чтобы они могли образовать пару. Карточки расположены в случайном порядке.';
@@ -10,3 +10,5 @@ export const RULES_TEXT_END_TITLE = 'Конец игры.';
 export const RULES_TEXT_END_TEXT = 'Как только игрок открыл все пары на поле, игра считается завершённой.';
 
 export const DEFAULT_PLAYING_FIELD_SIZE = 4;
+export const MIN_PLAYING_FIELD_SIZE = 2;
+export const MAX_PLAYING_FIELD_SIZE = 16;
