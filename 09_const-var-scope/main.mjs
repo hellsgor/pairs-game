@@ -11,7 +11,9 @@ let customFieldSize = defaultFieldSize;
 document.addEventListener('DOMContentLoaded', () => {
   prepare((defaultFieldSize));
   document.getElementById('start-button')
-    .addEventListener('click', (event) => startGame(event, numbersArray));
+    .addEventListener('click', (event) =>
+      startGame(event));
 });
 
-window.addEventListener('resize', () => setCardSlotSizes((customFieldSize)));
+window.addEventListener('resize', () =>
+  setCardSlotSizes((customFieldSize)));
