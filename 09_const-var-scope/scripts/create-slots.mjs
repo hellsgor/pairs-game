@@ -1,5 +1,7 @@
+import {PLAYING_FIELD_ID} from "./consts/index.js";
+
 export function createSlots(playingFieldSize) {
-  const cardsContainer = document.querySelector('.playing-field');
+  const cardsContainer = document.getElementById(PLAYING_FIELD_ID);
 
   for (let i = 0; i < playingFieldSize ** 2; i++) {
 

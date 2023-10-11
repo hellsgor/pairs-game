@@ -1,5 +1,5 @@
 import {createElement} from "./create-element.mjs";
-import {HIDDEN_TITLE} from "./consts/index.js";
+import {HIDDEN_TITLE, PLAYING_FIELD_ID} from "./consts/index.js";
 import {setCardSlotSizes} from "./set-cards-size.mjs";
 import {createSlots} from "./create-slots.mjs";
 import {createMenuTextContent} from './create-menu-text-content.mjs';
@@ -19,6 +19,7 @@ export function prepare(fieldSize) {
   body.classList.add('body-custom');
 
   startButton.setAttribute('id', 'start-button');
+  playingField.setAttribute('id', PLAYING_FIELD_ID);
 
   menu.append(createElement('h1', 'visually-hidden', HIDDEN_TITLE));
   menu.append(menuTextContent);
