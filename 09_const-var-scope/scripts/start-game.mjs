@@ -1,10 +1,12 @@
 import {shuffle} from "./shuffle.mjs";
 import {createNumbersArray} from "./create-number-array.mjs";
 import {
+  ARRAY_LENGTH_DO_NOT_MATCH,
   DEFAULT_PLAYING_FIELD_SIZE,
   FIELD_SIZE_COUNTER_ID,
   ODD_FIELD_SIZE_ERROR_TEXT
 } from "./consts/index.js";
+import {createCard} from "./create-card.mjs";
 
 export function startGame(event) {
   event.preventDefault();
@@ -19,4 +21,16 @@ export function startGame(event) {
         : DEFAULT_PLAYING_FIELD_SIZE
     )
   );
+  const slots = document.querySelectorAll('.card__slot');
+
+
+  if (slots.length === numberArray.length) {
+    slots.forEach((slot, idx) => {
+      slot.innerHTML = '';
+      slot.classList.remove('card__slot_empty');
+      createCard(slot, numberArray[idx]);
+    })
+  } else {
+    console.error(ARRAY_LENGTH_DO_NOT_MATCH);
+  }
 }

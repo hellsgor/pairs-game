@@ -19,3 +19,4 @@ export const FIELD_SIZE_COUNTER_DECREASE_BUTTON_ID = 'field-size-counter-decreas
 export const PLAYING_FIELD_ID = 'playing-field';
 
 export const ODD_FIELD_SIZE_ERROR_TEXT = 'Размер стороны поля должен быть чётным';
+export const ARRAY_LENGTH_DO_NOT_MATCH = ' Длинна массива слотов и длинна массива чисел не совпадают';
