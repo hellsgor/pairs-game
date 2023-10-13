@@ -11,6 +11,10 @@
   border-radius: var(--border-radius);
 }
 
+.card__slot_not-react {
+  pointer-events: none;
+}
+
 .card__exactly-card {
   position: relative;
   width: 100%;
@@ -38,10 +42,18 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -100;
-  visibility: hidden;
   background-color: orange;
   color: #000;
+}
+
+.card__exactly-card_hidden {
+  z-index: -100;
+  visibility: hidden;
+}
+
+.card__exactly-card_visible {
+  z-index: 100;
+  visibility: visible;
 }
 
 @media (hover: hover) {

@@ -33,6 +33,7 @@ body {
 
 .visually-hidden {
   position: fixed;
+  z-index: -10001;
   transform: scale(0);
 }
 

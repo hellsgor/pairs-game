@@ -24,8 +24,14 @@
   font-size: 14px;
 }
 
+.menu__start-menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--basic-indent);
+}
+
 .menu__controls {
-  display: none;
+  display: flex;
   justify-content: center;
   column-gap: var(--basic-indent);
 }
