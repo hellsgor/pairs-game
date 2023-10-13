@@ -4,7 +4,9 @@ import {
   ARRAY_LENGTH_DO_NOT_MATCH,
   DEFAULT_PLAYING_FIELD_SIZE,
   FIELD_SIZE_COUNTER_ID,
-  ODD_FIELD_SIZE_ERROR_TEXT
+  MENU_CONTROLS_ID,
+  ODD_FIELD_SIZE_ERROR_TEXT,
+  START_MENU_ID
 } from "./consts/index.js";
 import {createCard} from "./create-card.mjs";
 
@@ -25,11 +27,19 @@ export function startGame(event) {
 
 
   if (slots.length === numberArray.length) {
+
     slots.forEach((slot, idx) => {
       slot.innerHTML = '';
       slot.classList.remove('card__slot_empty');
       createCard(slot, numberArray[idx]);
     })
+
+    document.getElementById(START_MENU_ID)
+      .classList.add('visually-hidden');
+
+    document.getElementById(MENU_CONTROLS_ID)
+      .classList.remove('visually-hidden');
+    
   } else {
     console.error(ARRAY_LENGTH_DO_NOT_MATCH);
   }
