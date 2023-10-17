@@ -39,7 +39,10 @@ export function startGame(event) {
 
     document.getElementById(MENU_CONTROLS_ID)
       .classList.remove('visually-hidden');
-    
+
+    document.querySelector('.menu__rules')
+      .classList.add('accordion_collapsed');
+
   } else {
     console.error(ARRAY_LENGTH_DO_NOT_MATCH);
   }
