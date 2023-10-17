@@ -15,6 +15,16 @@
   pointer-events: none;
 }
 
+.card__slot_compare {
+  -moz-box-shadow: 0 0 4px 6px rgba(34, 60, 80, 0.26);
+  -webkit-box-shadow: 0 0 4px 6px rgba(34, 60, 80, 0.26);
+  box-shadow: 0 0 4px 6px rgba(34, 60, 80, 0.26);
+}
+
+.card__slot_guessed {
+  pointer-events: none;
+}
+
 .card__exactly-card {
   position: relative;
   width: 100%;
@@ -42,8 +52,16 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
   color: #000;
+}
+
+.card__number {
+  font-size: 40px;
+  font-weight: 700;
 }
 
 .card__exactly-card_hidden {
