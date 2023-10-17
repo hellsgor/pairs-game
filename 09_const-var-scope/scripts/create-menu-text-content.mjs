@@ -10,7 +10,7 @@ import {
 export function createMenuTextContent() {
   // ----- добавление контента в панель с текстом (menu) ------ начало
   const menuTextContent = createElement('div', 'menu__text-content');
-  const menuRules = createElement('div', ['menu__rules', ACCORDION_COMPONENT_ID, 'accordion_collapsed']);
+  const menuRules = createElement('div', ['menu__rules', ACCORDION_COMPONENT_ID]);
   const menuRulesSummary = createElement('div', ACCORDION_SUMMERY_ID);
   const menuRulesHeading = createElement('span', ['menu__text-content-heading', 'heading-2'], 'Правила игры');
   const menuText = createElement('div', ACCORDION_DETAILS_ID);
