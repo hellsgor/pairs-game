@@ -10,6 +10,7 @@ import {setCardSlotSizes} from "./set-cards-size.mjs";
 import {createSlots} from "./create-slots.mjs";
 import {createMenuTextContent} from './create-menu-text-content.mjs';
 import {createSizeCounter} from "./create-size-counter.mjs";
+import {createAccordions} from "./accordion/create-accordion.mjs";
 
 export function prepare(fieldSize) {
   const body = document.querySelector('body');
@@ -44,4 +45,5 @@ export function prepare(fieldSize) {
 
   createSlots(fieldSize);
   setCardSlotSizes(fieldSize);
+  createAccordions();
 }
