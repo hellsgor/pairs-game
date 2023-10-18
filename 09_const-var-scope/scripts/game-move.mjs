@@ -1,3 +1,5 @@
+import {gameOver} from "./game-over.mjs";
+
 export function gameMove(event) {
   event.preventDefault();
 
@@ -14,7 +16,7 @@ export function gameMove(event) {
       card.classList.add('card__slot_compare');
     }
   })
-  
+
   if (comparedCards.length === 2) {
 
     const allSlots = Array.from(
@@ -38,6 +40,7 @@ export function gameMove(event) {
       if (allSlots.every((slot) =>
         slot.classList.contains('card__slot_guessed'))) {
         console.log('you win');
+        gameOver(undefined, undefined, undefined, allSlots);
       }
 
       allSlots.forEach((slot) => {
@@ -48,7 +51,7 @@ export function gameMove(event) {
           slot.classList.remove('card__slot_not-react');
         }
       })
-    }, 1500);
+    }, 500);
 
     comparedCards.forEach((comparedCard) => {
       delete comparedCard.dataset.compared;

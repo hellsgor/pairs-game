@@ -1,7 +1,7 @@
 import {DEFAULT_ROUND_DURATION} from "../consts/index.js";
 import {startTimer} from "./startTimer.mjs";
 
-export function startMenuTimer(customDuration = 0) {
+export function startMenuTimer(customDuration = 0, gameMustBeOver) {
   const timer = document.getElementById('menu-timer');
   const minutes = timer.querySelector('.timer__minutes');
   const seconds = timer.querySelector('.timer__seconds');
@@ -15,5 +15,5 @@ export function startMenuTimer(customDuration = 0) {
       `0${DEFAULT_ROUND_DURATION}`
       : `0${DEFAULT_ROUND_DURATION}`;
 
-  return startTimer(timer, minutes, seconds, separator);
+  return startTimer(timer, minutes, seconds, separator, gameMustBeOver);
 }

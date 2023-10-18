@@ -24,6 +24,7 @@ export const FIELD_SIZE_COUNTER_INCREASE_BUTTON_ID = 'field-size-counter-increas
 export const FIELD_SIZE_COUNTER_DECREASE_BUTTON_ID = 'field-size-counter-decrease-button';
 export const PLAYING_FIELD_ID = 'playing-field';
 export const START_BUTTON_ID = 'start-button';
+export const END_BUTTON_ID = 'end-button';
 export const START_MENU_ID = 'start-menu';
 export const MENU_CONTROLS_ID = 'menu-controls';
 export const ACCORDION_COMPONENT_ID = 'accordion';

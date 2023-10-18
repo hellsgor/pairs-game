@@ -3,13 +3,16 @@ import {createNumbersArray} from "./create-number-array.mjs";
 import {
   ARRAY_LENGTH_DO_NOT_MATCH,
   DEFAULT_PLAYING_FIELD_SIZE,
+  END_BUTTON_ID,
   FIELD_SIZE_COUNTER_ID,
   MENU_CONTROLS_ID,
+  MENU_TIMER_ID,
   ODD_FIELD_SIZE_ERROR_TEXT,
   START_MENU_ID
 } from "./consts/index.js";
 import {createCard} from "./create-card.mjs";
 import {startMenuTimer} from "./timer/start-menu-timer.mjs";
+import {gameOver} from "./game-over.mjs";
 
 export function startGame(event) {
   event.preventDefault();
@@ -25,6 +28,8 @@ export function startGame(event) {
     )
   );
   const slots = document.querySelectorAll('.card__slot');
+  const menuTimerInterval = startMenuTimer(undefined, true);
+  const menuTimerElement = document.getElementById(MENU_TIMER_ID);
 
 
   if (slots.length === numberArray.length) {
@@ -41,7 +46,13 @@ export function startGame(event) {
     document.getElementById(MENU_CONTROLS_ID)
       .classList.remove('visually-hidden');
 
-    startMenuTimer();
+    document.getElementById(END_BUTTON_ID)
+      .addEventListener('click', () => gameOver(
+        event,
+        menuTimerInterval,
+        menuTimerElement,
+        slots,
+      ))
 
     document.querySelector('.menu__rules')
       .classList.add('accordion_collapsed');
