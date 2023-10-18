@@ -8,8 +8,12 @@ export function startMenuTimer(customDuration = 0) {
   const separator = timer.querySelector('.timer__separator');
 
   minutes.textContent = (customDuration && customDuration > 0)
-    ? `${customDuration}`
-    : `${DEFAULT_ROUND_DURATION}`;
+    ? (customDuration < 10 && `${customDuration}`.length < 2)
+      ? `0${customDuration}`
+      : `${customDuration}`
+    : (DEFAULT_ROUND_DURATION < 10 && `${DEFAULT_ROUND_DURATION}`.length < 2) ?
+      `0${DEFAULT_ROUND_DURATION}`
+      : `0${DEFAULT_ROUND_DURATION}`;
 
-  startTimer(timer, minutes, seconds, separator);
+  return startTimer(timer, minutes, seconds, separator);
 }
