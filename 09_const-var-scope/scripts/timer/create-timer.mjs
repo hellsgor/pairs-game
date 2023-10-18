@@ -1,5 +1,5 @@
-import {createElement} from "./create-element.mjs";
-import {MENU_TIMER_ID} from "./consts/index.js";
+import {createElement} from "../create-element.mjs";
+import {MENU_TIMER_ID} from "../consts/index.js";
 
 export function createTimer() {
   const timer = createElement('div', 'timer');

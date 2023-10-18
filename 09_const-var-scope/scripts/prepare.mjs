@@ -11,7 +11,7 @@ import {createSlots} from "./create-slots.mjs";
 import {createMenuTextContent} from './create-menu-text-content.mjs';
 import {createSizeCounter} from "./create-size-counter.mjs";
 import {createAccordions} from "./accordion/create-accordion.mjs";
-import {createTimer} from "./create-timer.mjs";
+import {createTimer} from "./timer/create-timer.mjs";
 
 export function prepare(fieldSize) {
   const body = document.querySelector('body');

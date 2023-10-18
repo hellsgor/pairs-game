@@ -9,6 +9,7 @@ import {
   START_MENU_ID
 } from "./consts/index.js";
 import {createCard} from "./create-card.mjs";
+import {startMenuTimer} from "./timer/start-menu-timer.mjs";
 
 export function startGame(event) {
   event.preventDefault();
@@ -39,6 +40,8 @@ export function startGame(event) {
 
     document.getElementById(MENU_CONTROLS_ID)
       .classList.remove('visually-hidden');
+
+    startMenuTimer();
 
     document.querySelector('.menu__rules')
       .classList.add('accordion_collapsed');
