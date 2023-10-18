@@ -5,13 +5,15 @@ export function startTimer(timer, minutes, seconds, separator = undefined) {
     }, 500)
     : undefined;
 
-  console.log(separator);
-  console.log(separatorBlink);
-
-  const menuTimer = setInterval(() => {
+  const thisTimer = setInterval(() => {
     if (+seconds.textContent === 0 && +minutes.textContent >= 1) {
       seconds.textContent = '60';
       --minutes.textContent;
+    }
+
+    if (minutes.textContent < 10 && minutes.textContent.length < 2) {
+      let temp = minutes.textContent;
+      minutes.textContent = `0${temp}`;
     }
 
     --seconds.textContent;
@@ -22,8 +24,13 @@ export function startTimer(timer, minutes, seconds, separator = undefined) {
     }
 
     if (+minutes.textContent === 0 && +seconds.textContent === 0) {
-      clearInterval(menuTimer);
+      clearInterval(thisTimer);
       clearInterval(separatorBlink)
     }
   }, 1000);
+
+  return {
+    mainTimer: thisTimer,
+    separatorTimer: separatorBlink,
+  }
 }
