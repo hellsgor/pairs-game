@@ -1,4 +1,11 @@
-export function startTimer(timer, minutes, seconds, separator = undefined) {
+import {gameOver} from "../game-over.mjs";
+
+export function startTimer(
+  timer,
+  minutes,
+  seconds,
+  separator = undefined,
+  gameMustBeOver = undefined) {
   const separatorBlink = separator
     ? setInterval(() => {
       separator.classList.toggle('timer__separator_darken');
@@ -22,12 +29,20 @@ export function startTimer(timer, minutes, seconds, separator = undefined) {
       let temp = seconds.textContent;
       seconds.textContent = `0${temp}`;
     }
-
-    if (+minutes.textContent === 0 && +seconds.textContent === 0) {
-      clearInterval(thisTimer);
-      clearInterval(separatorBlink)
-    }
   }, 1000);
+
+  const constantCheck = setInterval(() => {
+    if ((minutes.textContent === '00' && seconds.textContent === '00')
+      || (+minutes.textContent === 0 && +seconds.textContent === 0)) {
+      clearInterval(thisTimer);
+      clearInterval(separatorBlink);
+      clearInterval(constantCheck);
+
+      if (gameMustBeOver) {
+        gameOver(undefined, thisTimer, timer, undefined);
+      }
+    }
+  }, 50);
 
   return {
     mainTimer: thisTimer,
