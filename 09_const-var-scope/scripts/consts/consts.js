@@ -15,6 +15,9 @@ export const DEFAULT_PLAYING_FIELD_SIZE = 4;
 export const MIN_PLAYING_FIELD_SIZE = 2;
 export const MAX_PLAYING_FIELD_SIZE = 6;
 
+// константы времени
+export const DEFAULT_ROUND_DURATION = 1;
+
 // elements IDs
 export const FIELD_SIZE_COUNTER_ID = 'field-size-counter';
 export const FIELD_SIZE_COUNTER_INCREASE_BUTTON_ID = 'field-size-counter-increase-button';
@@ -26,6 +29,7 @@ export const MENU_CONTROLS_ID = 'menu-controls';
 export const ACCORDION_COMPONENT_ID = 'accordion';
 export const ACCORDION_SUMMERY_ID = 'accordion__summary';
 export const ACCORDION_DETAILS_ID = 'accordion__details';
+export const MENU_TIMER_ID = 'menu-timer';
 
 // errors texts
 export const ODD_FIELD_SIZE_ERROR_TEXT = 'Размер стороны поля должен быть чётным';

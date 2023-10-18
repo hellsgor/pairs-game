@@ -1,6 +1,5 @@
 .menu {
   display: flex;
-  /* height: 100%; */
   padding: 16px;
   border-radius: var(--border-radius);
   flex-direction: column;
@@ -8,7 +7,6 @@
   -webkit-box-shadow: -3px 4px 9px -1px rgba(0, 0, 0, 0.41);
   box-shadow: -3px 4px 9px -1px rgba(0, 0, 0, 0.41);
   background-color: white;
-  /* transition: height .3s ease-in-out; */
   row-gap: var(--basic-indent);
 }
 
@@ -40,4 +38,19 @@
 
 .menu__start-button {
   margin: 0 auto;
+}
+
+.menu__timer-block {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+.menu__timer {
+  align-self: center;
+  font-size: 160px;
+  font-weight: 700;
+  line-height: 100%;
+  color: var(--secondary-color);
 }

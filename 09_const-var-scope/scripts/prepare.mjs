@@ -11,6 +11,7 @@ import {createSlots} from "./create-slots.mjs";
 import {createMenuTextContent} from './create-menu-text-content.mjs';
 import {createSizeCounter} from "./create-size-counter.mjs";
 import {createAccordions} from "./accordion/create-accordion.mjs";
+import {createTimer} from "./create-timer.mjs";
 
 export function prepare(fieldSize) {
   const body = document.querySelector('body');
@@ -22,6 +23,9 @@ export function prepare(fieldSize) {
   const sizeCounter = createSizeCounter();
   const startButton = createElement('button', ['menu__start-button', 'button', 'button_primary', 'button_big'], 'Начать игру');
   const menuTextContent = createMenuTextContent();
+  const timer = createTimer();
+  const timerBlock = createElement('div', 'menu__timer-block');
+  const menuTimerText = createElement('h2', 'menu__timer-text', 'До завершения партии осталось:')
 
   body.classList.add('body-background');
   body.classList.add('body-custom');
@@ -30,6 +34,13 @@ export function prepare(fieldSize) {
   playingField.setAttribute('id', PLAYING_FIELD_ID);
   startMenu.setAttribute('id', START_MENU_ID);
   controls.setAttribute('id', MENU_CONTROLS_ID);
+
+  timer.classList.add('menu__timer');
+
+  timerBlock.append(menuTimerText);
+  timerBlock.append(timer);
+
+  controls.append(timerBlock);
 
   startMenu.append(sizeCounter);
   startMenu.append(startButton);
