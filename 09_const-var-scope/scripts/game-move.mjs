@@ -19,6 +19,7 @@ export function gameMove(event) {
       front.classList.remove('card__exactly-card_hidden');
 
       const slot = front.closest('.card__slot');
+      slot.classList.add('card__slot_rotate');
       slot.classList.add('card__slot_not-react');
       slot.classList.add('card__slot_compare');
 
@@ -55,6 +56,7 @@ export function gameMove(event) {
 
         if (!front.classList.contains('card__slot_guessed')) {
           front.classList.add('card__exactly-card_hidden');
+          slot.classList.remove('card__slot_rotate');
           slot.classList.remove('card__slot_not-react');
           slot.querySelector('.card__exactly-card_back')
             .classList.remove('card__exactly-card_hidden');

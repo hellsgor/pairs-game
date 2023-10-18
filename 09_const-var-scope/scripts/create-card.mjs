@@ -8,10 +8,10 @@ export function createCard(slot, number) {
     ['card__exactly-card', 'card__exactly-card_front', 'card__exactly-card_hidden']
   );
   cardFront.append(numberElement);
+  slot.append(cardFront);
   slot.append(createElement(
     'div',
     ['card__exactly-card', 'card__exactly-card_back']
   ));
-  slot.append(cardFront);
   slot.addEventListener('click', (event) => gameMove(event));
 }
