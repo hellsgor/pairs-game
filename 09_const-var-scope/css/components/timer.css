@@ -1,0 +1,15 @@
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 100%;
+}
+
+.timer__separator {
+  font-size: .8em;
+  line-height: normal;
+}
+
+.timer__separator_darken {
+  color: var(--disabled-color);
+}
