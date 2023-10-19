@@ -10,6 +10,13 @@ export const RULES_TEXT_GAME_PROGRESS_TEXT = 'Игрок может нажать
 export const RULES_TEXT_END_TITLE = 'Конец игры';
 export const RULES_TEXT_END_TEXT = 'Как только игрок открыл все пары на поле, игра считается завершённой.';
 
+// константы текста блока сообщений
+export const DEFEAT_TEXT = 'К сожалению, вы открыли не все карточки. В следующий раз повезёт';
+export const WIN_TEXT = 'Победа! Вы открыли все карточки';
+export const MESSAGE_BLOCK_HEADING = 'Партия завершена';
+export const WIN_ICON = '🎉';
+export const DEFEAT_ICON = '😢';
+
 // константы размера игрового поля
 export const DEFAULT_PLAYING_FIELD_SIZE = 4;
 export const MIN_PLAYING_FIELD_SIZE = 2;
@@ -19,6 +26,7 @@ export const MAX_PLAYING_FIELD_SIZE = 6;
 export const DEFAULT_ROUND_DURATION = 1;
 
 // elements IDs
+export const MENU_ID = 'menu';
 export const FIELD_SIZE_COUNTER_ID = 'field-size-counter';
 export const FIELD_SIZE_COUNTER_INCREASE_BUTTON_ID = 'field-size-counter-increase-button';
 export const FIELD_SIZE_COUNTER_DECREASE_BUTTON_ID = 'field-size-counter-decrease-button';
@@ -27,6 +35,7 @@ export const START_BUTTON_ID = 'start-button';
 export const END_BUTTON_ID = 'end-button';
 export const START_MENU_ID = 'start-menu';
 export const MENU_CONTROLS_ID = 'menu-controls';
+export const MENU_MESSAGE_ID = 'menu-message';
 export const ACCORDION_COMPONENT_ID = 'accordion';
 export const ACCORDION_SUMMERY_ID = 'accordion__summary';
 export const ACCORDION_DETAILS_ID = 'accordion__details';

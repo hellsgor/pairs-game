@@ -6,6 +6,7 @@ import {
   END_BUTTON_ID,
   FIELD_SIZE_COUNTER_ID,
   MENU_CONTROLS_ID,
+  MENU_MESSAGE_ID,
   MENU_TIMER_ID,
   ODD_FIELD_SIZE_ERROR_TEXT,
   START_MENU_ID
@@ -37,11 +38,18 @@ export function startGame(event) {
     slots.forEach((slot, idx) => {
       slot.innerHTML = '';
       slot.classList.remove('card__slot_empty');
+      slot.classList.remove('card__slot_not-react');
       createCard(slot, numberArray[idx]);
     })
 
+    document.getElementById(MENU_MESSAGE_ID)
+      .classList.add('visually-hidden');
+
     document.getElementById(START_MENU_ID)
       .classList.add('visually-hidden');
+
+    document.getElementById(END_BUTTON_ID)
+      .classList.remove('visually-hidden');
 
     document.getElementById(MENU_CONTROLS_ID)
       .classList.remove('visually-hidden');

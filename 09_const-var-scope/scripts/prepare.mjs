@@ -3,6 +3,8 @@ import {
   END_BUTTON_ID,
   HIDDEN_TITLE,
   MENU_CONTROLS_ID,
+  MENU_ID,
+  MENU_MESSAGE_ID,
   PLAYING_FIELD_ID,
   START_BUTTON_ID,
   START_MENU_ID
@@ -13,6 +15,7 @@ import {createMenuTextContent} from './create-menu-text-content.mjs';
 import {createSizeCounter} from "./create-size-counter.mjs";
 import {createAccordions} from "./accordion/create-accordion.mjs";
 import {createTimer} from "./timer/create-timer.mjs";
+import {createMessage} from "./message/create-message.mjs";
 
 export function prepare(fieldSize) {
   const body = document.querySelector('body');
@@ -27,17 +30,21 @@ export function prepare(fieldSize) {
   const menuTextContent = createMenuTextContent();
   const timer = createTimer();
   const timerBlock = createElement('div', 'menu__timer-block');
-  const menuTimerText = createElement('h2', 'menu__timer-text', 'До завершения партии осталось:')
+  const menuTimerText = createElement('h2', 'menu__timer-text', 'До завершения партии осталось:');
+  const messageBlock = createMessage();
 
   body.classList.add('body-background');
   body.classList.add('body-custom');
 
+  menu.setAttribute('id', MENU_ID);
   startButton.setAttribute('id', START_BUTTON_ID);
   endButton.setAttribute('id', END_BUTTON_ID);
   playingField.setAttribute('id', PLAYING_FIELD_ID);
   startMenu.setAttribute('id', START_MENU_ID);
   controls.setAttribute('id', MENU_CONTROLS_ID);
+  messageBlock.setAttribute('id', MENU_MESSAGE_ID);
 
+  messageBlock.classList.add('visually-hidden');
   timer.classList.add('menu__timer');
 
   timerBlock.append(menuTimerText);
@@ -53,6 +60,7 @@ export function prepare(fieldSize) {
   menu.append(menuTextContent);
   menu.append(startMenu);
   menu.append(controls);
+  menu.append(messageBlock);
 
   container.append(menu);
   container.append(playingField);

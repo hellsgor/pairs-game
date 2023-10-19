@@ -10,6 +10,10 @@
   row-gap: var(--basic-indent);
 }
 
+.menu_after-game .menu__start-menu {
+  order: 50;
+}
+
 .menu__text-content {
   display: flex;
   flex-direction: column;
