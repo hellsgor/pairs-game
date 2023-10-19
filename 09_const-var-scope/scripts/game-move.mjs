@@ -39,7 +39,6 @@ export function gameMove(event) {
     window.setTimeout(() => {
       if (allSlots.every((slot) =>
         slot.classList.contains('card__slot_guessed'))) {
-        console.log('you win');
         gameOver(undefined, undefined, undefined, allSlots);
       }
 
