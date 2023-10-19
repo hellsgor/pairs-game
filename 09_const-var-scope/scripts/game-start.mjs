@@ -47,7 +47,7 @@ export function startGame(event) {
       .classList.remove('visually-hidden');
 
     document.getElementById(END_BUTTON_ID)
-      .addEventListener('click', () => gameOver(
+      .addEventListener('click', (event) => gameOver(
         event,
         menuTimerInterval,
         menuTimerElement,
