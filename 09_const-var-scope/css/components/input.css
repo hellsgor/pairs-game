@@ -1,0 +1,17 @@
+input:not([type="checkbox"]):not([type="radio"]) {
+  padding: calc(var(--basic-indent) / 4) calc(var(--basic-indent) / 2);
+  outline: 1px solid transparent;
+  border: 2px solid var(--disabled-color);
+  border-radius: calc(var(--border-radius) * 4);
+  transition: border-color .3s ease-in-out;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):focus {
+  border-color: var(--primary-color);
+}
+
+@media (hover: hover) {
+  input:not([type="checkbox"]):not([type="radio"]):hover {
+    border-color: var(--hover-color);
+  }
+}

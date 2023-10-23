@@ -1,0 +1,30 @@
+.size-input {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--components-inner-indent);
+}
+
+.size-input__label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: calc(var(--basic-indent) / 2);
+  row-gap: calc(var(--basic-indent) / 4);
+}
+
+.size-input__input {
+  max-width: 80px;
+  text-align: center;
+}
+
+.size-input__input::-webkit-outer-spin-button,
+.size-input__input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+.size-input__info-item_error {
+  color: red;
+}

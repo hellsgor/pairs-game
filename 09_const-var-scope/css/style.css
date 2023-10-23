@@ -11,6 +11,8 @@
 @import url('./components/accordion.css');
 @import url('./components/timer.css');
 @import url('./components/message.css');
+@import url('./components/size-input.css');
+@import url('./components/input.css');
 
 html,
 body {

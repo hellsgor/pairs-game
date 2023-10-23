@@ -20,7 +20,7 @@ export const DEFEAT_ICON = '😢';
 // константы размера игрового поля
 export const DEFAULT_PLAYING_FIELD_SIZE = 4;
 export const MIN_PLAYING_FIELD_SIZE = 2;
-export const MAX_PLAYING_FIELD_SIZE = 6;
+export const MAX_PLAYING_FIELD_SIZE = 10;
 
 // константы времени
 export const DEFAULT_ROUND_DURATION = 1;
@@ -40,6 +40,7 @@ export const ACCORDION_COMPONENT_ID = 'accordion';
 export const ACCORDION_SUMMERY_ID = 'accordion__summary';
 export const ACCORDION_DETAILS_ID = 'accordion__details';
 export const MENU_TIMER_ID = 'menu-timer';
+export const SIZE_INPUT_ID = 'size-input';
 
 // errors texts
 export const ODD_FIELD_SIZE_ERROR_TEXT = 'Размер стороны поля должен быть чётным';

@@ -12,10 +12,11 @@ import {
 import {setCardSlotSizes} from "./set-cards-size.mjs";
 import {createSlots} from "./create-slots.mjs";
 import {createMenuTextContent} from './create-menu-text-content.mjs';
-import {createSizeCounter} from "./create-size-counter.mjs";
 import {createAccordions} from "./accordion/create-accordion.mjs";
 import {createTimer} from "./timer/create-timer.mjs";
 import {createMessage} from "./message/create-message.mjs";
+import {createSizeInput} from "./create-size-input.mjs";
+import {createSizeCounter} from "./create-size-counter.mjs";
 
 export function prepare(fieldSize) {
   const body = document.querySelector('body');
@@ -25,6 +26,7 @@ export function prepare(fieldSize) {
   const startMenu = createElement('div', 'menu__start-menu');
   const controls = createElement('div', ['menu__controls', 'visually-hidden']);
   const sizeCounter = createSizeCounter();
+  const sizeInput = createSizeInput();
   const startButton = createElement('button', ['menu__start-button', 'button', 'button_primary', 'button_big'], 'Начать партию');
   const endButton = createElement('button', ['menu__end-button', 'button', 'button_secondary', 'button_big'], 'Завершить партию');
   const menuTextContent = createMenuTextContent();
@@ -53,7 +55,12 @@ export function prepare(fieldSize) {
   controls.append(timerBlock);
   controls.append(endButton);
 
-  startMenu.append(sizeCounter);
+  // startMenu.append(sizeCounter);
+  // для использования счётчика
+  // или
+  startMenu.append(sizeInput);
+  // для использования input (в соответствии с ТЗ)
+  // для управления количеством карточек на поле
   startMenu.append(startButton);
 
   menu.append(createElement('h1', 'visually-hidden', HIDDEN_TITLE));

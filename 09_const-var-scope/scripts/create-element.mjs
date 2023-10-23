@@ -15,7 +15,7 @@ export function createElement(
     classNames.forEach(item => {
       element.classList.add(item);
     })
-  } else {
+  } else if (classNames) {
     element.classList.add(classNames);
   }
 
