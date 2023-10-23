@@ -12,3 +12,9 @@
   background-size: cover;
   gap: var(--basic-indent);
 }
+
+@media (max-width: 1200px) {
+  .playing-field {
+    height: calc(100vh - var(--basic-indent));
+  }
+}

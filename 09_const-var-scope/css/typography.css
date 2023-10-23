@@ -34,3 +34,27 @@ h3,
   font-size: 18px;
   line-height: 150%;
 }
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1,
+  .heading-1 {
+    font-size: 28px;
+    line-height: 100%;
+  }
+
+  h2,
+  .heading-2 {
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  h3,
+  .heading-3 {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}

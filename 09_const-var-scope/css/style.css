@@ -49,3 +49,80 @@ body {
 .playing-field {
   flex: 2 2 75%;
 }
+
+@media (max-width: 1440px) {
+  .menu {
+    flex-basis: 33%;
+  }
+
+  .playing-field {
+    flex-basis: 66%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .body-custom {
+    padding-top: calc((var(--basic-indent) / 4) * 2);
+    padding-bottom: calc((var(--basic-indent) / 4) * 2);
+  }
+
+  .container {
+    padding-right: calc((var(--basic-indent) / 4) * 2);
+    padding-left: calc((var(--basic-indent) / 4) * 2);
+    column-gap: calc((var(--basic-indent) / 4) * 2);
+  }
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    flex-basis: 40%;
+  }
+
+  .playing-field {
+    flex-basis: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .body-custom {
+    padding-bottom: 0;
+  }
+
+  .container {
+    height: 100%;
+    flex-direction: column-reverse;
+    row-gap: calc((var(--basic-indent) / 4) * 2);
+  }
+
+  .menu {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    flex-basis: 40%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10002;
+    background-color: #fff;
+    content: '';
+  }
+
+  .container::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10003;
+    width: 70%;
+    vertical-align: center;
+    text-align: center;
+    color: #000;
+    content: 'Нет-нет! Адаптив под смартфон еще не готов. Откройте страницу на устройстве с бОльшим разрешением экрана.';
+    transform: translate(-50%, -50%);
+  }
+}
