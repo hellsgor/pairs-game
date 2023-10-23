@@ -1,8 +1,8 @@
 .button {
   outline: 2px solid transparent;
-  outline-offset: 4px;
+  outline-offset: calc(var(--basic-indent) / 8);
   border: none;
-  border-radius: 32px;
+  border-radius: calc(var(--border-radius) * 4);
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
@@ -20,7 +20,7 @@
 }
 
 .button_big {
-  padding: 16px var(--basic-indent);
+  padding: calc(var(--basic-indent) / 2) var(--basic-indent);
 }
 
 .button_small {
