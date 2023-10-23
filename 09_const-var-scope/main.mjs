@@ -3,6 +3,7 @@ import {prepare} from "./scripts/prepare.mjs";
 import {
   DEFAULT_PLAYING_FIELD_SIZE,
   FIELD_SIZE_COUNTER_ID,
+  SIZE_INPUT_ID,
   START_BUTTON_ID
 } from "./scripts/consts/index.js";
 import {setCardSlotSizes} from "./scripts/set-cards-size.mjs";
@@ -16,7 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
       startGame(event));
 });
 
-window.addEventListener('resize', () =>
-  setCardSlotSizes((+document
-    .getElementById(FIELD_SIZE_COUNTER_ID)
-    .dataset.counterNumber)));
+window.addEventListener('resize', () => {
+  const fieldSize = document.getElementById(FIELD_SIZE_COUNTER_ID)
+    ? +document.getElementById(FIELD_SIZE_COUNTER_ID).dataset.counterNumber
+    : +document.getElementById(SIZE_INPUT_ID);
+  setCardSlotSizes(fieldSize);
+});
