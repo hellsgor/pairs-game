@@ -5,6 +5,7 @@ import {
   MIN_PLAYING_FIELD_SIZE,
   SIZE_INPUT_ID
 } from "./consts/index.js";
+import {setCustomFieldSize} from "./set-custom-field-size.mjs";
 
 export function createSizeInput() {
   const sizeInputWrapper = createElement('div',
@@ -38,6 +39,7 @@ export function createSizeInput() {
       info.querySelectorAll('.size-input__info-item_error').forEach((infoItem) =>
         infoItem.classList.remove('size-input__info-item_error'));
     }
+    setCustomFieldSize();
   })
   input.addEventListener('input', () => {
     if (input.value % 2 !== 0) {

@@ -10,13 +10,29 @@ import {createSlots} from "./create-slots.mjs";
 import {setCardSlotSizes} from "./set-cards-size.mjs";
 
 export function setCustomFieldSize(event) {
-  event.preventDefault();
+  let customFieldSize;
+  if (event) {
+    event.preventDefault();
+    customFieldSize = getFieldSizeFromCounter(event);
+  } else {
+    customFieldSize = document.getElementById('size-input').value;
+  }
 
+  if (customFieldSize >= MIN_PLAYING_FIELD_SIZE
+    && customFieldSize <= MAX_PLAYING_FIELD_SIZE
+    && customFieldSize % 2 === 0) {
+    createSlots(customFieldSize);
+    setCardSlotSizes(customFieldSize);
+  }
+}
+
+function getFieldSizeFromCounter(event) {
   const counter = event.target.parentElement
     .querySelector(`#${FIELD_SIZE_COUNTER_ID}`);
   const counterNum = (counter.dataset && counter.dataset.counterNumber)
     ? Number(counter.dataset.counterNumber)
     : DEFAULT_PLAYING_FIELD_SIZE;
+
   let customFieldSize;
 
   if (event.target.getAttribute('id') === FIELD_SIZE_COUNTER_INCREASE_BUTTON_ID) {
@@ -58,7 +74,5 @@ export function setCustomFieldSize(event) {
         event.target.setAttribute('disabled', true);
       })()
   }
-
-  createSlots(customFieldSize);
-  setCardSlotSizes(customFieldSize);
+  return customFieldSize;
 }

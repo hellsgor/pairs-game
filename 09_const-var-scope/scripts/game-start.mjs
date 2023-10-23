@@ -9,6 +9,7 @@ import {
   MENU_MESSAGE_ID,
   MENU_TIMER_ID,
   ODD_FIELD_SIZE_ERROR_TEXT,
+  SIZE_INPUT_ID,
   START_MENU_ID
 } from "./consts/index.js";
 import {createCard} from "./create-card.mjs";
@@ -18,15 +19,15 @@ import {gameOver} from "./game-over.mjs";
 export function startGame(event) {
   event.preventDefault();
 
-  const fieldSizeCounter = document.getElementById(FIELD_SIZE_COUNTER_ID);
+  const fieldSize = document.getElementById(FIELD_SIZE_COUNTER_ID)
+    ? document.getElementById(FIELD_SIZE_COUNTER_ID).dataset && document.getElementById(FIELD_SIZE_COUNTER_ID).dataset.counterNumber
+      ? document.getElementById(FIELD_SIZE_COUNTER_ID).dataset.counterNumber % 2 === 0
+        ? document.getElementById(FIELD_SIZE_COUNTER_ID).dataset.counterNumber
+        : console.error(ODD_FIELD_SIZE_ERROR_TEXT)
+      : DEFAULT_PLAYING_FIELD_SIZE
+    : document.getElementById(SIZE_INPUT_ID).value;
   const numberArray = shuffle(
-    createNumbersArray(
-      fieldSizeCounter.dataset && fieldSizeCounter.dataset.counterNumber
-        ? fieldSizeCounter.dataset.counterNumber % 2 === 0
-          ? fieldSizeCounter.dataset.counterNumber
-          : console.error(ODD_FIELD_SIZE_ERROR_TEXT)
-        : DEFAULT_PLAYING_FIELD_SIZE
-    )
+    createNumbersArray(fieldSize)
   );
   const slots = document.querySelectorAll('.card__slot');
   const menuTimerElement = document.getElementById(MENU_TIMER_ID);
