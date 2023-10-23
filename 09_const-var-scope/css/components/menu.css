@@ -1,5 +1,7 @@
 .menu {
   display: flex;
+  overflow-y: scroll;
+  max-height: calc(100vh - (var(--basic-indent) * 2));
   padding: 16px;
   border-radius: var(--border-radius);
   flex-direction: column;
