@@ -7,6 +7,10 @@ export function startMenuTimer(customDuration = 0, gameMustBeOver) {
   const seconds = timer.querySelector('.timer__seconds');
   const separator = timer.querySelector('.timer__separator');
 
+  delete timer.dataset.gameIsOver;
+  minutes.innerText = '00';
+  seconds.innerText = '00';
+
   minutes.textContent = (customDuration && customDuration > 0)
     ? (customDuration < 10 && `${customDuration}`.length < 2)
       ? `0${customDuration}`

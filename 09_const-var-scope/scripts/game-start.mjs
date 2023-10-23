@@ -29,8 +29,12 @@ export function startGame(event) {
     )
   );
   const slots = document.querySelectorAll('.card__slot');
-  const menuTimerInterval = startMenuTimer(undefined, true);
   const menuTimerElement = document.getElementById(MENU_TIMER_ID);
+
+  delete menuTimerElement.dataset.gameIsOverFromGameMove;
+
+  // const menuTimerInterval = startMenuTimer(undefined);
+  startMenuTimer(undefined);
 
 
   if (slots.length === numberArray.length) {
@@ -55,12 +59,10 @@ export function startGame(event) {
       .classList.remove('visually-hidden');
 
     document.getElementById(END_BUTTON_ID)
-      .addEventListener('click', (event) => gameOver(
-        event,
-        menuTimerInterval,
-        menuTimerElement,
-        slots,
-      ))
+      .addEventListener('click', (event) => {
+        menuTimerElement.dataset.gameIsOverFromGameMove = 'true';
+        gameOver(event, slots);
+      })
 
     document.querySelector('.menu__rules')
       .classList.add('accordion_collapsed');

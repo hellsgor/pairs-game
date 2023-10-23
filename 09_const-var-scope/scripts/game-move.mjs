@@ -1,4 +1,5 @@
 import {gameOver} from "./game-over.mjs";
+import {MENU_TIMER_ID} from "./consts/index.js";
 
 export function gameMove(event) {
   event.preventDefault();
@@ -33,27 +34,25 @@ export function gameMove(event) {
     if (firstNumber === secondNumber) {
       comparedCards.forEach(((compareCard) => {
         compareCard.classList.add('card__slot_guessed');
+        compareCard.classList.remove('card__slot_compare');
+        delete compareCard.dataset.compared;
       }))
     }
 
-    window.setTimeout(() => {
-      if (allSlots.every((slot) =>
-        slot.classList.contains('card__slot_guessed'))) {
-        gameOver(undefined, undefined, undefined, allSlots);
-      }
-
+    if (allSlots.every((slot) => slot.classList.contains('card__slot_guessed'))) {
+      document.getElementById(MENU_TIMER_ID).dataset.gameIsOverFromGameMove = 'true';
+      gameOver(undefined, allSlots);
+    } else {
       allSlots.forEach((slot) => {
-        slot.classList.remove('card__slot_compare');
-
-        if (!(slot.classList.contains('card__slot_guessed'))) {
-          slot.classList.remove('card__slot_rotate');
-          slot.classList.remove('card__slot_not-react');
-        }
+        window.setTimeout(() => {
+          if (!slot.classList.contains('card__slot_guessed')) {
+            slot.classList.remove('card__slot_rotate');
+            slot.classList.remove('card__slot_not-react');
+          }
+          slot.classList.remove('card__slot_compare');
+          delete slot.dataset.compared;
+        }, 300);
       })
-    }, 500);
-
-    comparedCards.forEach((comparedCard) => {
-      delete comparedCard.dataset.compared;
-    })
+    }
   }
 }

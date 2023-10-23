@@ -32,15 +32,16 @@ export function startTimer(
   }, 1000);
 
   const constantCheck = setInterval(() => {
-    if ((minutes.textContent === '00' && seconds.textContent === '00')
-      || (+minutes.textContent === 0 && +seconds.textContent === 0)) {
+    if (+minutes.textContent === 0 && +seconds.textContent === 0) {
       clearInterval(thisTimer);
       clearInterval(separatorBlink);
       clearInterval(constantCheck);
-
-      if (gameMustBeOver) {
-        gameOver(undefined, thisTimer, timer, undefined);
-      }
+      gameOver(undefined, undefined);
+    }
+    if (timer.dataset.gameIsOverFromGameMove) {
+      clearInterval(thisTimer);
+      clearInterval(separatorBlink);
+      clearInterval(constantCheck);
     }
   }, 50);
 
