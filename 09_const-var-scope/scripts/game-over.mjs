@@ -20,8 +20,6 @@ export function gameOver(event, slots) {
     delete slot.dataset.compared;
   })
 
-  console.log(foundedSlots);
-
   messageOutput(foundedSlots.every((slot) =>
     slot.classList.contains('card__slot_guessed')));
 
