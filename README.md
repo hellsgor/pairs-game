@@ -1,6 +1,6 @@
-# COUPLES Game
+# PAIRS Game
 
-Game "COUPLES". Educational project from Skillbox.
+Game "PAIRS". Educational project from Skillbox.
 
 Игра «ПАРЫ». Образовательный проект от Skillbox.
 
