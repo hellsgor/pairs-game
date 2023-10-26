@@ -55,10 +55,10 @@ export function prepare(fieldSize) {
   controls.append(timerBlock);
   controls.append(endButton);
 
-  // startMenu.append(sizeCounter);
+  startMenu.append(sizeCounter);
   // для использования счётчика
   // или
-  startMenu.append(sizeInput);
+  // startMenu.append(sizeInput);
   // для использования input (в соответствии с ТЗ)
   // для управления количеством карточек на поле
   startMenu.append(startButton);

@@ -1,18 +1,18 @@
-@import url('./null-style.css');
-@import url('./fonts.css');
-@import url('./variables.css');
-@import url('./typography.css');
+@import url('null-style.css');
+@import url('fonts.css');
+@import url('variables.css');
+@import url('typography.css');
 
-@import url('./components/menu.css');
-@import url('./components/playing-field.css');
-@import url('./components/card.css');
-@import url('./components/button.css');
-@import url('./components/size-counter.css');
-@import url('./components/accordion.css');
-@import url('./components/timer.css');
-@import url('./components/message.css');
-@import url('./components/size-input.css');
-@import url('./components/input.css');
+@import url('components/menu.css');
+@import url('components/playing-field.css');
+@import url('components/card.css');
+@import url('components/button.css');
+@import url('components/size-counter.css');
+@import url('components/accordion.css');
+@import url('components/timer.css');
+@import url('components/message.css');
+@import url('components/size-input.css');
+@import url('components/input.css');
 
 html,
 body {
